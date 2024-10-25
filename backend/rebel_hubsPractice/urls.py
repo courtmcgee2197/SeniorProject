@@ -1,5 +1,5 @@
 """
-URL configuration for rebel_hubs project.
+URL configuration for rebel_hubsPractice project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -20,7 +20,7 @@ from User_Api.views import CreateUserView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('test',CreateUserView.as_view(),name='test'),
     path('User_Api/register/',CreateUserView.as_view(),name='register'),
     path('User_Api/token/',TokenObtainPairView.as_view(),name='get_token'),
     path('User_Api/token/refresh/',TokenRefreshView.as_view(),name='refresh_token'),
