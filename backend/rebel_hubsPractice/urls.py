@@ -20,7 +20,7 @@ from User_Api.views import CreateUserView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test',CreateUserView.as_view(),name='test'),
+    path('test1',CreateUserView.as_view(),name='test'),
     path('User_Api/register/',CreateUserView.as_view(),name='register'),
     path('User_Api/token/',TokenObtainPairView.as_view(),name='get_token'),
     path('User_Api/token/refresh/',TokenRefreshView.as_view(),name='refresh_token'),
